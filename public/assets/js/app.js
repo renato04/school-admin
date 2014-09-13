@@ -1,7 +1,7 @@
 
-var sampleApp = angular.module('sampleApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute']);
 
-sampleApp.config(['$routeProvider',
+myApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/dashboard', {
@@ -18,14 +18,14 @@ sampleApp.config(['$routeProvider',
 }]);
 
 
-sampleApp.controller('DashboardCtrl', function($scope) {
+myApp.controller('DashboardCtrl', function($scope) {
 	
 	$scope.message = 'This is Add new order screen';
 	
 });
 
 
-sampleApp.controller('ShowOrdersController', function($scope) {
+myApp.controller('ShowOrdersController', function($scope) {
 
 	$scope.message = 'This is Show orders screen';
 
