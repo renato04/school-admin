@@ -5,7 +5,7 @@ myApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/dashboard', {
-	templateUrl: 'dashboard.html',
+	templateUrl: '/partial/dashboard.html',
 	controller: 'DashboardCtrl'
       }).
       when('/ShowOrders', {
