@@ -8,9 +8,9 @@ myApp.config(['$routeProvider',
 	templateUrl: '/partial/dashboard.html',
 	controller: 'DashboardCtrl'
       }).
-      when('/ShowOrders', {
-	templateUrl: 'show_orders.html',
-	controller: 'ShowOrdersController'
+      when('/students', {
+	templateUrl: '/partial/students.html',
+	controller: 'StudentsController'
       }).
       otherwise({
 	redirectTo: '/dashboard'
@@ -25,7 +25,7 @@ myApp.controller('DashboardCtrl', function($scope) {
 });
 
 
-myApp.controller('ShowOrdersController', function($scope) {
+myApp.controller('StudentsController', function($scope) {
 
 	$scope.message = 'This is Show orders screen';
 
