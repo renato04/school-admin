@@ -23,20 +23,16 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>First Name</th>
-                                                    <th>Last Name</th>
-                                                    <th>Username</th>
+                                                    <th>Nome</th>
+                                                    <th>Email</th>
                                                     <th></th>
                                                     <th><a class="btn btn-info" data-toggle="modal" href="#/student"><i class="fa fa-plus"></a></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
+                                                <tr ng-repeat="student in students">
+                                                    <td>{{student.name}}</td>
+                                                    <td>{{student.email}}</td>
                                                     <td>
                                                         <button class="btn btn-primary btn-xs" ><i class="fa fa-edit "></i></button>
                                                                                                                 

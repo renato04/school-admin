@@ -1,5 +1,5 @@
 
-var myApp = angular.module('myApp', ['ngRoute', 'angular-loading-bar']);
+var myApp = angular.module('myApp', ['ngRoute', 'angular-loading-bar', 'ngAnimate']);
 
 myApp.config(['$routeProvider',
   function($routeProvider) {
@@ -29,9 +29,18 @@ myApp.controller('DashboardCtrl', function($scope) {
 });
 
 
-myApp.controller('StudentsController', function($scope) {
+myApp.controller('StudentsController', function($scope, $http) {
 
-	$scope.message = 'This is Show orders screen';
+	$scope.students = [];
+
+	$http.get('/api/students')
+		.success(function(data) {
+			$scope.students = data;
+			console.log(data);
+		})
+		.error(function(data) {
+			console.log('Error: ' + data);
+		});	
 
 });
 
