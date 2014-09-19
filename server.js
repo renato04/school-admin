@@ -28,7 +28,8 @@ var Student = mongoose.model('Student', {
 		state : String,
 		email : String,
 		password : String
-	});
+	},
+	'students');
 
 
 // routes ======================================================================
