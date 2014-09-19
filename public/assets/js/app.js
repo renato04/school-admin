@@ -12,6 +12,10 @@ myApp.config(['$routeProvider',
 	templateUrl: '/partial/students.html',
 	controller: 'StudentsController'
       }).
+      when('/student', {
+	templateUrl: '/partial/student.html',
+	controller: 'StudentController'
+      }).      
       otherwise({
 	redirectTo: '/dashboard'
       });
@@ -28,5 +32,16 @@ myApp.controller('DashboardCtrl', function($scope) {
 myApp.controller('StudentsController', function($scope) {
 
 	$scope.message = 'This is Show orders screen';
+
+});
+
+myApp.controller('StudentController', function($scope) {
+
+	$scope.student = {};
+
+	$scope.save = function()
+	{
+		alert(JSON.stringify($scope.student));
+	};
 
 });
