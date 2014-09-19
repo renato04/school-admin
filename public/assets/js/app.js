@@ -35,13 +35,19 @@ myApp.controller('StudentsController', function($scope) {
 
 });
 
-myApp.controller('StudentController', function($scope) {
+myApp.controller('StudentController', function($scope, $http) {
 
 	$scope.student = {};
 
 	$scope.save = function()
 	{
-		alert(JSON.stringify($scope.student));
+		$http.post('/api/students', $scope.student)
+			.success(function(data) {
+				alert('Salvo com sucesso!');
+			})
+			.error(function(data) {
+				console.log('Error: ' + data);
+			});
 	};
 
 });
