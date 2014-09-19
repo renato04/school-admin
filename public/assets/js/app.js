@@ -1,5 +1,5 @@
 
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'angular-loading-bar']);
 
 myApp.config(['$routeProvider',
   function($routeProvider) {
