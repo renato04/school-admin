@@ -42,6 +42,11 @@ myApp.controller('StudentsController', function($scope, $http) {
 			console.log('Error: ' + data);
 		});	
 
+	$scope.oigabby = function()
+	{
+		alert("oi gabby!!!");
+	}
+
 });
 
 myApp.controller('StudentController', function($scope, $http) {
