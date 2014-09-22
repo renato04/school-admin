@@ -1,0 +1,54 @@
+ <div class="container">
+    <div class="row pad-botm">
+        <div class="col-md-12">
+            <h4 class="header-line">CADASTRO DE ALUNO</h4>
+        </div>
+    </div>
+        <div class="row">
+            <div cg-busy="{promise:promise,message:'Processando',backdrop:true,templateUrl:'/template/loading.html',minDuration:700}"></div>
+            </div>       
+            <div class="col-md-12">
+              <div class="panel panel-primary">
+                        <div class="panel-heading">
+                           
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>Nome</label>
+                                    <input class="form-control" type="text" ng-model="student.name"/>
+                                </div>
+                                 <div class="form-group">
+                                    <label>Endereço</label>
+                                    <input class="form-control" type="text" ng-model="student.address"/>
+                                </div>
+                                 <div class="form-group">
+                                    <label>Cidade</label>
+                                    <input class="form-control" type="text" ng-model="student.city"/>
+                                </div>       
+                                <div class="form-group">
+                                            <label>Estado</label>
+                                            <select class="form-control" ng-model="student.state">
+                                                <option>One Vale</option>
+                                                <option>Two Vale</option>
+                                                <option>Three Vale</option>
+                                                <option>Four Vale</option>
+                                            </select>
+                                </div>                                                      
+                                 <div class="form-group">
+                                            <label>Email</label>
+                                            <input class="form-control" type="text" ng-model="student.email"/>
+                                </div>
+                                 <div class="form-group">
+                                            <label>Senha</label>
+                                            <input class="form-control" type="password" ng-model="student.password"/>
+                                </div>
+                                <button type="submit" class="btn btn-primary" ng-click="save()">Salvar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>    
+    </div>    
+</div>
